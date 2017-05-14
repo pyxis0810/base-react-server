@@ -7,6 +7,7 @@ var info = require('./info');
 var posts = require('./posts');
 var comments = require('./comments');
 var contact = require('./contact');
+var reservation = require('./reservation');
 
 router.use('/auth', auth);
 router.use('/locale', locale);
@@ -14,5 +15,6 @@ router.use('/info', info);
 router.use('/posts', posts);
 router.use('/comments', comments);
 router.use('/contact', contact);
+router.use('/reservation', reservation);
 
 module.exports = router;

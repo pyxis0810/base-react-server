@@ -7,7 +7,7 @@ var ReservationSchema = new Schema({
   banner: String,
   date: String,
   email: String,
-  member: Integer,
+  member: Number,
   phone: String,
   purpose: String,
   subject : String,
@@ -21,5 +21,5 @@ var ReservationSchema = new Schema({
   }
 });
 
-ContactSchema.plugin( autoIncrement.plugin , { model : "reservation", field : "id" , startAt : 1 } );
+ReservationSchema.plugin( autoIncrement.plugin , { model : "reservation", field : "id" , startAt : 1 } );
 module.exports = mongoose.model('reservation' , ReservationSchema);
