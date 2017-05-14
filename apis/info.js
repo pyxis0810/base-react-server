@@ -4,7 +4,7 @@ var InfoModel = require('../models/info');
 var config = require('../config');
 
 var googleMapsClient = require('@google/maps').createClient({
-    key: config.googleMap.apiKey
+    key: config.google.apiKey
 });
 
 router.get('/', function(req, res, next) {

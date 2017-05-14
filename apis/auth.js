@@ -3,10 +3,10 @@ var router = express.Router();
 var UserModel = require('../models/user');
 
 var jwt = require('jwt-simple');
-const config = require('../config');
+var config = require('../config');
 
 function tokenForUser(user) {
-    const timestamp = new Date().getTime();
+    var timestamp = new Date().getTime();
     return jwt.encode({
         sub: user._id,
         iat: timestamp
@@ -100,7 +100,7 @@ router.get('/token', function(req, res, next) {
     res.json({
         token: tokenForUser(user),
         email: user.email,
-        role: user.role,
+        role: user.role
     });
 });
 

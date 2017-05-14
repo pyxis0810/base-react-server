@@ -7,7 +7,7 @@ var supported = ['en', 'ko'];
 router.use(locale(supported));
 
 router.get('/', function(req, res) {
-    res.json({ language: req.locale });
+    res.send(req.locale);
 });
 
 module.exports = router;
